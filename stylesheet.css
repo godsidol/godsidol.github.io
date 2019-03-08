@@ -1,8 +1,47 @@
-#main-logo-container {
+/* check for best practice */
+body {
+    margin: 0; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+#flex-center-main {
+    width: 100%;
+    height: 100vh;
+
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-#main-logo {
-    width: 400px;
+#flex-center-main img {
+    width: 800px;
+}
+
+#grid-center-menu {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 2fr 1fr 1fr 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#design-link {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#video-link {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+#illustrator-link {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+#grid-center-menu a {
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
