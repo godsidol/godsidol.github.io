@@ -1,0 +1,8 @@
+#main-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#main-logo {
+    width: 400px;
+}
