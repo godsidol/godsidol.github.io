@@ -1,17 +1,26 @@
 
 var fixedCardSet = false;
-var lastKnowScrollPosition;
-var fixedCard = document.querySelector(".fixed-card");
+let fixedCards = document.querySelectorAll(".fixed-card");
+var snapContainer = document.querySelector(".snap-scroll-container");
 
-window.addEventListener("scroll", function(){
-    if (!fixedCardSet) {
-      window.requestAnimationFrame(function() {
-        fixedCard.classList.add("final");
-        fixedCardSet = false;
-      });
-  
-      fixedCardSet = true;
-    }
+fixedCards.forEach(function(fixedCard, i){
+    fixedCard.addEventListener("hover", function(){
+        window.requestAnimationFrame(function() {
+            fixedCard.classList.add("final");
+        });
+    });
+});
+
+snapContainer.addEventListener("scroll", function(e){
+    fixedCards.forEach(function(card, i){
+        if(card.matches(":hover")){
+            setTimeout(function(){
+                window.requestAnimationFrame(function() {
+                    card.classList.add("final");
+                });
+            }, 1000 * i);
+        }
+    });
 });
 
 if ('scrollRestoration' in history) {
