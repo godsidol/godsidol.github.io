@@ -110,7 +110,7 @@ a {
     border-radius: 3px;
     
     transition: height 1s cubic-bezier(0.42, 0, 0.43, 1.29);
-    /* scroll-snap-align: end; */
+    scroll-snap-align: start;
 }
 
 .fixed-card.final{
@@ -128,7 +128,7 @@ ul {
 
 ul li {
     padding-left: .5rem;
-    padding-bottom: 2rem;
+    padding-bottom: .5rem;
 }
 
 .snap-scroll-container {
@@ -140,7 +140,6 @@ ul li {
 }
 
 .snap-scroll-container > div {
-    border: red solid 1px;
     height: calc(100vh - 100px);
     display: flex;
     flex-flow: column;

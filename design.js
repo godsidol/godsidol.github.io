@@ -3,6 +3,8 @@ var fixedCardSet = false;
 let fixedCards = document.querySelectorAll(".fixed-card");
 var snapContainer = document.querySelector(".snap-scroll-container");
 
+var videoSections = document.querySelectorAll("video");
+
 snapContainer.addEventListener("scroll", function(e){
     fixedCards.forEach(function(card, i){
         if(card.matches(":hover")){
@@ -14,6 +16,22 @@ snapContainer.addEventListener("scroll", function(e){
         }
     });
 });
+
+videoSections.forEach(function(video, i){
+    video.addEventListener("mouseenter", function(){
+        if (video.paused) {
+            playVideo(video);
+        }
+    });
+});
+
+async function playVideo(video) {
+    try {
+      await video.play();
+    } catch(err) {
+      console.log(err);
+    }
+}
 
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
