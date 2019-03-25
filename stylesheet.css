@@ -1,7 +1,7 @@
 /* check for best practice */
 body {
     margin: 0; 
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
@@ -23,7 +23,7 @@ body {
     height: 100vh;
 
     display: grid;
-    grid-template: 1fr 1fr 1fr / 2fr 1fr 1fr 1fr 2fr;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 2fr 1fr 1fr;
     justify-items: center;
     align-items: center;
 }
@@ -100,6 +100,7 @@ a {
 
     top: -1px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -109,11 +110,12 @@ a {
     box-shadow: 0px 3px 10px 1px gray;
     border-radius: 3px;
     
-    transition: height 1s cubic-bezier(0.42, 0, 0.43, 1.29);
+    transition: all 2s cubic-bezier(0.42, 0, 0.43, 1.29);
     scroll-snap-align: start;
 }
 
 .fixed-card.final{
+    flex-direction: row;
     height: 100px;
 }
 
@@ -135,6 +137,7 @@ ul li {
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y proximity;
     scroll-padding-top: 100px;
 }
@@ -145,10 +148,36 @@ ul li {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     scroll-snap-align: start;
 }
 
 .snap-scroll-container > div > img {
     height: 400px;
     box-shadow: 0px 0px 15px 0px rgb(133, 133, 133);
+}
+
+.snap-scroll-container > div > video {
+    height: 400px;
+    box-shadow: 0px 0px 15px 0px rgb(133, 133, 133);
+}
+
+.snap-scroll-container > div > h1 {
+    /* font-size: 20vw; */
+
+}
+
+.productText {
+    font-size: 28.7vw;
+    margin-right: 20px;
+}
+
+.materialText {
+    font-size: 23.9vw;
+    margin-right: 7px;
+}
+
+.promotionText {
+    font-size: 21.6vw;
+    margin-right: 2x;
 }
