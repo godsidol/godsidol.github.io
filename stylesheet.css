@@ -161,8 +161,8 @@ ul li {
 .snap-scroll-container > div {
     height: calc(100vh - 100px);
     display: flex;
-    flex-flow: column;
-    justify-content: center;
+    flex-flow: row;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     scroll-snap-align: start;
@@ -184,13 +184,16 @@ ul li {
     width: 100%;
 }
 
+.small-image {
+    width: 15%;
+}
+
 
 .snap-scroll-container > div > video {
     height: 100%;
 }
 
 .snap-scroll-container > div > h1 {
-    /* font-size: 20vw; */
 
 }
 
