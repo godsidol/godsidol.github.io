@@ -2,6 +2,7 @@
 var fixedCardSet = false;
 let fixedCards = document.querySelectorAll(".fixed-card");
 var snapContainer = document.querySelector(".snap-scroll-container");
+var unorderedList = document.querySelectorAll("ul");
 
 var videoSections = document.querySelectorAll("video");
 
@@ -11,6 +12,9 @@ snapContainer.addEventListener("scroll", function(e){
             setTimeout(function(){
                 window.requestAnimationFrame(function() {
                     card.classList.add("final");
+                    
+                    var ul = card.querySelector("ul");
+                    ul.classList.add("list-final");
                 });
             }, 1000 * i);
         }

@@ -111,7 +111,6 @@ a {
     border-radius: 3px;
     
     transition: all 2s cubic-bezier(0.42, 0, 0.43, 1.29);
-    scroll-snap-align: start;
 }
 
 .fixed-card.final{
@@ -121,16 +120,33 @@ a {
 
 .fixed-img {
     box-shadow: 0px 0px 15px 0px rgb(133, 133, 133);
+
     max-height: 150px;
+    background: white;
 }
 
 ul {
-    margin-left: 4rem;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+
+    padding-inline-start: 0px;
 }
 
+
 ul li {
-    padding-left: .5rem;
-    padding-bottom: .5rem;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.list-final {
+    flex-direction: row;
 }
 
 .snap-scroll-container {
@@ -150,16 +166,22 @@ ul li {
     align-items: center;
     text-align: center;
     scroll-snap-align: start;
+
+    overflow: hidden;
 }
 
-.snap-scroll-container > div > img {
-    height: 400px;
-    box-shadow: 0px 0px 15px 0px rgb(133, 133, 133);
+.product-image {
+    height: 500px;
 }
+
+.full-image {
+    height: 145%;
+    width: 100%;
+}
+
 
 .snap-scroll-container > div > video {
-    height: 400px;
-    box-shadow: 0px 0px 15px 0px rgb(133, 133, 133);
+    
 }
 
 .snap-scroll-container > div > h1 {
