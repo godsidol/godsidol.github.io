@@ -189,6 +189,10 @@ ul li {
 }
 
 .small-image {
+    width: 100%;
+}
+
+.small-link {
     width: 8%;
 }
 
