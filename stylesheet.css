@@ -125,6 +125,10 @@ a {
     background: white;
 }
 
+.fixed-listing {
+    margin-left: 20px;
+}
+
 ul {
     width: 100%;
     list-style: none;
@@ -185,7 +189,25 @@ ul li {
 }
 
 .small-image {
-    width: 15%;
+    width: 8%;
+}
+
+.medium-image {
+    width: 25%;
+}
+
+.snap-scroll-container > .section-description {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-description > h1 {
+    font-size: 6em;
+}
+
+.section-description > p {
+    width: 50%;
+    font-size: 1em;
 }
 
 
